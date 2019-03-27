@@ -1,0 +1,24 @@
+--A is A at Pin_69
+--operation mode is input
+
+A = INPUT();
+
+
+--B is B at Pin_126
+--operation mode is input
+
+B = INPUT();
+
+
+--C is C at Pin_8
+--operation mode is output
+
+C = OUTPUT(!A1L4);
+
+
+--A1L4 is C~0 at LC7_B25
+--operation mode is normal
+
+A1L4 = B;
+
+

@@ -1,0 +1,18 @@
+--A is A
+--operation mode is input
+
+A = INPUT();
+
+
+--B is B
+--operation mode is input
+
+B = INPUT();
+
+
+--C is C
+--operation mode is output
+
+C = OUTPUT(!B);
+
+

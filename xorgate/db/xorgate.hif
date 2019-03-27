@@ -1,0 +1,21 @@
+Version 4.0 Build 214 3/25/2004 Service Pack 1 SJ Web Edition
+19
+OFF
+OFF
+OFF
+OFF
+OFF
+fpga_exp.lmf
+# entity
+xorgate
+# case_insensitive
+# source_file
+xorgate.bdf
+1444595384
+23
+# storage
+db|xorgate(0).cnf
+db|xorgate(0).cnf
+# end
+# complete
+

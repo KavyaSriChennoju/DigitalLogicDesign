@@ -1,0 +1,128 @@
+Timing Analyzer report for fulladdergate
+Sun Oct 11 20:07:41 2015
+Version 4.0 Build 214 3/25/2004 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Settings
+  3. Timing Analyzer Summary
+  4. tpd
+  5. Minimum tpd
+  6. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++----------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                               ;
++-----------------------------------------------------------------------------------------
+; Option                                                ; Setting            ; From ; To ;
++-------------------------------------------------------+--------------------+------+----+
+; Device name                                           ; EPF10K30ETC144-1   ;      ;    ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;
+; Ignore user-defined clock settings                    ; Off                ;      ;    ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;
+; Cut off clear and preset signal paths                 ; On                 ;      ;    ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;
+; Run Minimum Analysis                                  ; On                 ;      ;    ;
+; Use Minimum Timing Models                             ; Off                ;      ;    ;
+; Number of paths to report                             ; 200                ;      ;    ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;
++-------------------------------------------------------+--------------------+------+----+
+
+
++---------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                   ;
++----------------------------------------------------------------------------
+; Type                   ; Slack ; Required Time ; Actual Time ; From ; To  ;
++------------------------+-------+---------------+-------------+------+-----+
+; Worst-case tpd         ; N/A   ; None          ; 7.300 ns    ; B    ; sum ;
+; Worst-case minimum tpd ; N/A   ; None          ; 7.100 ns    ; A    ; sum ;
++------------------------+-------+---------------+-------------+------+-----+
+
+
++-----------------------------------------------------------+
+; tpd                                                       ;
++------------------------------------------------------------
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To   ;
++-------+-------------------+-----------------+------+------+
+; N/A   ; None              ; 7.300 ns        ; B    ; cout ;
+; N/A   ; None              ; 7.300 ns        ; A    ; cout ;
+; N/A   ; None              ; 7.300 ns        ; cin  ; sum  ;
+; N/A   ; None              ; 7.300 ns        ; B    ; sum  ;
+; N/A   ; None              ; 7.100 ns        ; cin  ; cout ;
+; N/A   ; None              ; 7.100 ns        ; A    ; sum  ;
++-------+-------------------+-----------------+------+------+
+
+
++-------------------------------------------------------------------+
+; Minimum tpd                                                       ;
++--------------------------------------------------------------------
+; Minimum Slack ; Required P2P Time ; Actual P2P Time ; From ; To   ;
++---------------+-------------------+-----------------+------+------+
+; N/A           ; None              ; 7.100 ns        ; A    ; sum  ;
+; N/A           ; None              ; 7.100 ns        ; cin  ; cout ;
+; N/A           ; None              ; 7.300 ns        ; B    ; sum  ;
+; N/A           ; None              ; 7.300 ns        ; cin  ; sum  ;
+; N/A           ; None              ; 7.300 ns        ; A    ; cout ;
+; N/A           ; None              ; 7.300 ns        ; B    ; cout ;
++---------------+-------------------+-----------------+------+------+
+
+
++---------------------------+
+; Timing Analyzer Messages  ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 4.0 Build 214 3/25/2004 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Oct 11 20:07:40 2015
+Info: Command: quartus_tan --import_settings_files=off --export_settings_files=off fulladdergate -c fulladdergate
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Longest tpd from source pin B to destination pin cout is 7.300 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.300 ns) = 1.300 ns; Loc. = Pin_124; Fanout = 2; PIN Node = 'B'
+    Info: 2: + IC(0.500 ns) + CELL(1.000 ns) = 2.800 ns; Loc. = LC3_C25; Fanout = 1; COMB Node = 'inst8~41'
+    Info: 3: + IC(0.700 ns) + CELL(3.800 ns) = 7.300 ns; Loc. = Pin_13; Fanout = 0; PIN Node = 'cout'
+    Info: Total cell delay = 6.100 ns ( 83.56 % )
+    Info: Total interconnect delay = 1.200 ns ( 16.44 % )
+Info: Shortest tpd from source pin A to destination pin sum is 7.100 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.300 ns) = 1.300 ns; Loc. = Pin_54; Fanout = 2; PIN Node = 'A'
+    Info: 2: + IC(0.500 ns) + CELL(0.800 ns) = 2.600 ns; Loc. = LC6_C25; Fanout = 1; COMB Node = 'inst1~13'
+    Info: 3: + IC(0.700 ns) + CELL(3.800 ns) = 7.100 ns; Loc. = Pin_17; Fanout = 0; PIN Node = 'sum'
+    Info: Total cell delay = 5.900 ns ( 83.10 % )
+    Info: Total interconnect delay = 1.200 ns ( 16.90 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Processing ended: Sun Oct 11 20:07:41 2015
+    Info: Elapsed time: 00:00:00
+
+

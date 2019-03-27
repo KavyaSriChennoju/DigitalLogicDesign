@@ -1,0 +1,42 @@
+--A1L5 is inst1~13 at LC6_C25
+--operation mode is normal
+
+A1L5 = cin $ B $ A;
+
+
+--A1L6 is inst8~41 at LC3_C25
+--operation mode is normal
+
+A1L6 = B & (A # cin) # !B & A & cin;
+
+
+--cin is cin at Pin_126
+--operation mode is input
+
+cin = INPUT();
+
+
+--B is B at Pin_124
+--operation mode is input
+
+B = INPUT();
+
+
+--A is A at Pin_54
+--operation mode is input
+
+A = INPUT();
+
+
+--sum is sum at Pin_17
+--operation mode is output
+
+sum = OUTPUT(A1L5);
+
+
+--cout is cout at Pin_13
+--operation mode is output
+
+cout = OUTPUT(A1L6);
+
+

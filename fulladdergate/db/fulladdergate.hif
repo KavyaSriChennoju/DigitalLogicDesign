@@ -1,0 +1,21 @@
+Version 4.0 Build 214 3/25/2004 Service Pack 1 SJ Web Edition
+19
+OFF
+OFF
+OFF
+OFF
+OFF
+fpga_exp.lmf
+# entity
+fulladdergate
+# case_insensitive
+# source_file
+fulladdergate.bdf
+1444574234
+23
+# storage
+db|fulladdergate(0).cnf
+db|fulladdergate(0).cnf
+# end
+# complete
+

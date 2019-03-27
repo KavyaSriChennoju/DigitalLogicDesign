@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.300 ns
+From           : B
+To             : sum
+
+Type           : Worst-case minimum tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.100 ns
+From           : A
+To             : sum
+
+--------------------------------------------------------------------------------------
+
